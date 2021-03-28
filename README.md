@@ -1,0 +1,1 @@
+# Tentativa de fazer uma boa previsao de serie temporal

@@ -9,6 +9,7 @@
 - [ ] PLR-BPN
 - [ ] BIC-KNN
 - [ ] BIC-BAYES
+- [ ] janelas de evento
 
 ## Indicadores que posso usar:
 - [ ] medias moveis

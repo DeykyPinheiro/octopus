@@ -16,3 +16,7 @@
 - [ ] ROC, %R, ATR
 - [ ] Volume, MACD, RSI
 - [ ] Nuvens, Ichimoku
+
+
+## Trabalho de referencia
+* https://s3-sa-east-1.amazonaws.com/thedevconf/presentations/TDC2019POA/machine/ZAQ-8023_2019-11-28T052223_TDC_MauricioArgemi.pdf

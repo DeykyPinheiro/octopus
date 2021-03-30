@@ -1,0 +1,43 @@
+vamos usar tres tecnicas:
+ - 1 cluster hierarquico
+ - 2 bicluster
+ - 3 naive bayes
+ - 4 10 grupos de indicadores tecnicos
+
+ 1 - cluster hierarquico (para identificar quais dias o pregao esta andando similar)
+ * algoritmo de agrupamento não supervisionado
+ * sem sobreposicao de elementos
+ * não relaciona
+ * gera uma hierarquia de particoes
+ * não necessita previamente do numero de grupos
+
+ 2 - bicluster
+ * tecnica muito utilizada em bioinformatica, mineracao de texto e predicao de acoes
+ * agrupamento realizado sobre as features e instancias de um conjunto de dados simultaneos
+ * uma instancia pode estar e mais de um grupo
+ * nome na literatura -> subspace, cocluster, ou cluster dimensional.
+
+ 3 - naive bayes, podemos usar um KNN tbm
+ * classificados basseado em probabilidade
+ * assume independencia entre os atributos
+ * insensivel a dados irrelevantes
+ * lida com dados discretos e continuos
+ * rapido pra treinar
+
+4 - indicadores
+* mme
+* macd
+* rsi
+* ROC
+* %R
+* ART
+
+ o que é o mercado financeiro?
+ * fluxo continuo de dados
+ * grande volume de dados
+ * grande variedade de fontes
+ * produzidos em alta velocidade
+
+ tecnicas pra inplementar: 7 dias
+* fcd janela de eventos, delizantes 
+* fcd janela de eventos, de marcacao(aprende o marcado, depois aprende o novo marcado e esquece o antigo)

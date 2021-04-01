@@ -17,8 +17,20 @@
 - [ ] Volume, MACD, RSI
 - [ ] Nuvens, Ichimoku
 
-# formular
+# formula
 - [ ] escrever a formualr de cada um dos indicadores
+- [x] medias moveis
+- [ ] ROC
+- [ ] %R
+- [ ] ATR
+- [ ] Volume
+- [ ] MACD
+- [ ] RSI
+- [ ] Nuvens Ichimoku
+
+
+
+
 
 ## Referencia
 ### Trabalho PDF

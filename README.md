@@ -17,6 +17,8 @@
 - [ ] Volume, MACD, RSI
 - [ ] Nuvens, Ichimoku
 
+# formular
+- [ ] escrever a formualr de cada um dos indicadores
 
 ## Referencia
 ### Trabalho PDF

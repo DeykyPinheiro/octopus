@@ -41,3 +41,5 @@
 
 ### plataforma para confirma indicadores
 * https://br.tradingview.com/chart/?symbol=BMFBOVESPA:IBOV&source=unauth_header&feature=launch_chart
+
+* https://br.investing.com/charts/live-charts

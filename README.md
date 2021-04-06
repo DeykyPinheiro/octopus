@@ -24,7 +24,7 @@
 - [ ] %R
 - [ ] ATR
 - [ ] Volume
-- [ ] MACD
+- [x] MACD
 - [ ] RSI
 - [ ] Nuvens Ichimoku
 

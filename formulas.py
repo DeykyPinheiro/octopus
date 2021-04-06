@@ -13,7 +13,7 @@ def media_exponencial(df, periodos=10):
     return df_mme
 
 # Recebe um Serie, retorna um df com a linha macd e o sinal
-def macd_df(df, curta=12, longa=26, sinal=9):
+def macd(df, curta=12, longa=26, sinal=9):
     a = media_exponencial(df, curta)
     b = media_exponencial(df, longa)
     df_macd = pd.DataFrame(a.values - b.values)

@@ -41,5 +41,3 @@ vamos usar tres tecnicas:
  tecnicas pra inplementar: 7 dias
 * fcd janela de eventos, delizantes 
 * fcd janela de eventos, de marcacao(aprende o marcado, depois aprende o novo marcado e esquece o antigo)
-
-teste_branch

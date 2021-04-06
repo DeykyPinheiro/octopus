@@ -25,12 +25,12 @@ vamos usar tres tecnicas:
  * rapido pra treinar
 
 4 - indicadores
-* mme
-* macd
-* rsi
-* ROC
-* %R
-* ART
+* mme (periodos = 9, 21, 52)
+* macd (periodos mme = 9, 12, 26)
+* rsi (periodos = 14)
+* ROC (periodos = 9)
+* %R (periodos = 14)
+* ART (periodos = 14)
 
  o que é o mercado financeiro?
  * fluxo continuo de dados

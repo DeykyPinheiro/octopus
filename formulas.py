@@ -5,4 +5,5 @@ import pandas as pd
 def medias_moveis(df, periodos=20):
     df[f'mean_{periodos}'] = df['Close'].rolling(window=periodos).mean()
 
-estudar formulas do pd.ewma nova documentacao pandas
+def media_exponencial(df, periodos=10):
+    df[f'mme_{periodos}'] = pd.core.window.ExponentialMovingWindow(df['Close'], periodos).mean()

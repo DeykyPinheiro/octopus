@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 
 # medias simples, desliza em uma serie/df um determindado numero de periodoso padrao 20
-def medias_delizantes(serie, periodos=2):
+def medias_delizantes(serie, periodos=20):
     df = pd.DataFrame(serie.rolling(window=periodos).mean())
     df.columns = [f'mean_{periodos}']
     return df

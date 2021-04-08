@@ -1,13 +1,15 @@
 import numpy as np
 import pandas as pd
 
-# medias moveis, padrao 20
-def medias_moveis(df, periodos=20):
-    df[f'mean_{periodos}'] = df['Close'].rolling(window=periodos).mean()
+# medias simples, desliza em uma serie/df um determindado numero de periodoso padrao 20
+def medias_delizantes(serie, periodos=2):
+    df = pd.DataFrame(serie.rolling(window=periodos).mean())
+    df.columns = [f'mean_{periodos}']
+    return df
 
 
 # retorna um DataFrame, para concatenar ao df, original
-def media_exponencial(df, periodos=10):
+def media_exponencial_deslizante(df, periodos=10):
     df_mme = pd.DataFrame(pd.core.window.ExponentialMovingWindow(df, periodos).mean())
     df_mme.columns = [f'mme_{periodos}']
     return df_mme

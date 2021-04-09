@@ -16,11 +16,11 @@ def media_exponencial_deslizante(df, periodos=10):
 
 # Recebe um Serie, retorna um df com a linha macd e o sinal
 def macd(df, curta=12, longa=26, sinal=9):
-    a = media_exponencial(df, curta)
-    b = media_exponencial(df, longa)
+    a = media_exponencial_deslizante(df, curta)
+    b = media_exponencial_deslizante(df, longa)
     df_macd = pd.DataFrame(a.values - b.values)
     df_macd.columns = ['macd']
-    df_macd[f'mme_macd_{sinal}'] = media_exponencial(df_macd, sinal)
+    df_macd[f'mme_macd_{sinal}'] = media_exponencial_deslizante(df_macd, sinal)
     return  df_macd
 
 #link de ajuda

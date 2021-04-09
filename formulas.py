@@ -28,7 +28,6 @@ def macd(df, curta=12, longa=26, sinal=9):
 def atr(df, periodos=14):
     
     data = df.copy()
-
     high = data['High']
     low = data['Low']
     close = data['Close']
@@ -38,7 +37,6 @@ def atr(df, periodos=14):
     data['tr2'] = abs(low - close.shift(1))
     
     tr = data[['tr0', 'tr1', 'tr2']].max(1)
-
     atr = media_exponencial_deslizante(tr, periodos)
     
     return atr

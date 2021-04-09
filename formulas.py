@@ -22,3 +22,6 @@ def macd(df, curta=12, longa=26, sinal=9):
     df_macd.columns = ['macd']
     df_macd[f'mme_macd_{sinal}'] = media_exponencial(df_macd, sinal)
     return  df_macd
+
+#link de ajuda
+#https://www.investimentonabolsa.com/2015/03/analise-tecnica-average-true-range-atr.html

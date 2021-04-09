@@ -25,5 +25,3 @@ def macd(df, curta=12, longa=26, sinal=9):
 
 #link de ajuda
 #https://www.investimentonabolsa.com/2015/03/analise-tecnica-average-true-range-atr.html
-
-teste

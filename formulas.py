@@ -13,14 +13,18 @@ def exponential_moving_average_rolling(data, periods=9):
     s = pd.Series(pd.core.window.ExponentialMovingWindow(data, periods).mean())
     return s
 
-# Recebe um Serie, retorna um df com a linha macd e o sinal
-def macd(df, curta=12, longa=26, sinal=9):
-    a = media_exponencial_deslizante(df, curta)
-    b = media_exponencial_deslizante(df, longa)
-    df_macd = pd.DataFrame(a.values - b.values)
-    df_macd.columns = ['macd']
-    df_macd[f'mme_macd_{sinal}'] = media_exponencial_deslizante(df_macd, sinal)
-    return  df_macd
+# receives a series or array,returns a DataFrame, with macd and mme of n periods of the macd line
+def macd(data, short=12, long=26, signal=9):
+
+    data = pd.Series(data)
+    a = exponential_moving_average_rolling(data, short)
+    b = exponential_moving_average_rolling(data, long)
+    
+    macd = pd.Series(a.values - b.values, name='macd')
+    mme = pd.DataFrame(exponential_moving_average_rolling(macd, periods=signal))
+    
+    df = pd.concat([macd, mme], axis=1)
+    return  df
 
 # Recebe um df e os periodos da media exponencial, e os periodos, e devolve um df com o ATR
 # recebe apenas no padrao 'High', 'Low', 'Close'

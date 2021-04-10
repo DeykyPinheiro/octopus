@@ -13,7 +13,7 @@ def exponential_moving_average_rolling(data, periods=9):
     s = pd.Series(pd.core.window.ExponentialMovingWindow(data, periods).mean())
     return s
 
-# receives a series or array,returns a DataFrame, with macd and mme of n periods of the macd line
+# receives a series or array,returns a DataFrame with macd and mme of n periods of the macd line
 def macd(data, short=12, long=26, signal=9):
 
     data = pd.Series(data)
@@ -26,20 +26,20 @@ def macd(data, short=12, long=26, signal=9):
     df = pd.concat([macd, mme], axis=1)
     return  df
 
-# Recebe um df e os periodos da media exponencial, e os periodos, e devolve um df com o ATR
-# recebe apenas no padrao 'High', 'Low', 'Close'
-def atr(df, periodos=14):
+# receives a DataFrame with mandatory columns: High, Low, Close.
+# returns a series with the ATR
+def atr(data, periods=14):
     
-    data = df.copy()
-    high = data['High']
-    low = data['Low']
-    close = data['Close']
+    df = data.copy()
+    high = df['High']
+    low = df['Low']
+    close = df['Close']
 
-    data['tr0'] = abs(high - low)
-    data['tr1'] = abs(high - close.shift(1))
-    data['tr2'] = abs(low - close.shift(1))
+    df['tr0'] = abs(high - low)
+    df['tr1'] = abs(high - close.shift(1))
+    df['tr2'] = abs(low - close.shift(1))
     
-    tr = data[['tr0', 'tr1', 'tr2']].max(1)
-    atr = media_exponencial_deslizante(tr, periodos)
+    tr = df[['tr0', 'tr1', 'tr2']].max(1)
+    atr = exponential_moving_average_rolling(tr, periods)
     
     return atr

@@ -4,15 +4,14 @@ import pandas as pd
 # receives a series or array, return a series of the average of n periods
 def moving_average_rolling(data, periods=20):
     data = pd.Series(data, name=f'mean_{periods}')    
-    data = data.rolling(window=periods).mean()
-    return data
+    s = data.rolling(window=periods).mean()
+    return s
 
-
-# retorna um DataFrame, para concatenar ao df, original
-def media_exponencial_deslizante(df, periodos=10):
-    df_mme = pd.DataFrame(pd.core.window.ExponentialMovingWindow(df, periodos).mean())
-    df_mme.columns = [f'mme_{periodos}']
-    return df_mme
+# receives a series or array, return a series of the exponential average of n periods
+def exponential_moving_average_rolling(data, periods=10):
+    data = pd.Series(data, , name=f'mme_{periods}')
+    s = pd.Series(pd.core.window.ExponentialMovingWindow(data, periods).mean())
+    return s
 
 # Recebe um Serie, retorna um df com a linha macd e o sinal
 def macd(df, curta=12, longa=26, sinal=9):

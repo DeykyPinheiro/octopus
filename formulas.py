@@ -1,11 +1,11 @@
 import numpy as np
 import pandas as pd
 
-# medias simples, desliza em uma serie/df um determindado numero de periodoso padrao 20
-def medias_delizantes(serie, periodos=20):
-    df = pd.DataFrame(serie.rolling(window=periodos).mean())
-    df.columns = [f'mean_{periodos}']
-    return df
+# receives a series or array, return a series of the average of n periods
+def moving_average_rolling(data, periods=20):
+    data = pd.Series(data, name=f'mean_{periods}')    
+    data = data.rolling(window=periods).mean()
+    return data
 
 
 # retorna um DataFrame, para concatenar ao df, original

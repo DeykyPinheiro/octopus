@@ -8,8 +8,8 @@ def moving_average_rolling(data, periods=20):
     return s
 
 # receives a series or array, return a series of the exponential average of n periods
-def exponential_moving_average_rolling(data, periods=10):
-    data = pd.Series(data, , name=f'mme_{periods}')
+def exponential_moving_average_rolling(data, periods=9):
+    data = pd.Series(data, name=f'mme_{periods}')
     s = pd.Series(pd.core.window.ExponentialMovingWindow(data, periods).mean())
     return s
 

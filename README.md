@@ -22,7 +22,7 @@
 - [x] medias moveis
 - [ ] ROC
 - [ ] %R
-- [ ] ATR
+- [x] ATR
 - [ ] Volume
 - [x] MACD
 - [ ] RSI

@@ -40,10 +40,10 @@ def atr(data, periods=14):
     df['tr2'] = abs(low - close.shift(1))
     
     tr = df[['tr0', 'tr1', 'tr2']].max(1)
-    atr = pd.Series(exponential_moving_average_rolling(tr, periods), name=f'atr')
+    atr = pd.Series(exponential_moving_average_rolling(tr, periods), name=f'atr_{periods}')
     
     return atr
 
 
-indicador willians %R
-https://www.bussoladoinvestidor.com.br/williams-r-indicador-de-momento/
+#indicador willians %R
+#https://www.bussoladoinvestidor.com.br/williams-r-indicador-de-momento/

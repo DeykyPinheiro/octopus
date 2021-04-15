@@ -43,3 +43,7 @@ def atr(data, periods=14):
     atr = pd.Series(exponential_moving_average_rolling(tr, periods), name=f'atr')
     
     return atr
+
+
+indicador willians %R
+https://www.bussoladoinvestidor.com.br/williams-r-indicador-de-momento/
